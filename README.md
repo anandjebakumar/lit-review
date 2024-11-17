@@ -19,7 +19,7 @@ Coming back to the chicken-egg problem, in order to solve this, one approach is 
 
 To get the v1 of this app going, here are the basic things that are necessary:
 
- - [] login (this could be something simple like Andrej Karpathy's [ArXiv-Sanity](https://arxiv-sanity-lite.com/))
- - [] home page that lists all papers reviewed
- - [] ability to add reviews
- - [] ability to edit/delete reviews
+ - [ ] login (this could be something simple like Andrej Karpathy's [ArXiv-Sanity](https://arxiv-sanity-lite.com/))
+ - [ ] home page that lists all papers reviewed
+ - [ ] ability to add reviews
+ - [ ] ability to edit/delete reviews
