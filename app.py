@@ -1,7 +1,16 @@
 from nicegui import ui
 import yaml
 import time
+import pandas as pd
+import os
 
+if os.path.exists('data.csv'):
+    data = pd.read_csv('data.csv')
+else:
+    data = pd.DataFrame(columns=['title', 'authors', 'journal', 
+                                 'publication_date', 'abstract', 
+                                 'rating', 'review', 'time_of_review'])
+    data.to_csv('data.csv', index=False)
 all_data = []
 
 def save_review(components):
@@ -44,7 +53,7 @@ def home():
             rating = review['rating']
             review = review['review']
 
-    ui.button('add review', on_click=ui.notify('clicked')).style('font-size:120%')
+    ui.button('add review', on_click= lambda: ui.navigate.to('/add_review')).style('font-size:120%')
 
 @ui.page('/add_review')
 def add_review():
